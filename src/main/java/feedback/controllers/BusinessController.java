@@ -7,7 +7,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class BusinessController {
-    @Autowired BusinessService businessService;
+    @Autowired
+    BusinessService businessService;
 
 //    @RequestMapping(value = "/business/", method = RequestMethod.GET)
 //    public ResponseEntity<List<Business>> listAllUsers() {
@@ -18,9 +19,6 @@ public class BusinessController {
 //        }
 //        return new ResponseEntity<List<Business>>(businesses, HttpStatus.OK);
 //    }
-
-
-
 
 
     @RequestMapping("/")
