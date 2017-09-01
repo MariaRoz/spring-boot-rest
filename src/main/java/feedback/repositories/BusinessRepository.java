@@ -1,11 +1,11 @@
 package feedback.repositories;
 
 
-import org.springframework.data.repository.CrudRepository;
 import feedback.models.Business;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-import java.util.List;
-
-public interface BusinessRepository extends CrudRepository<Business, Long> {
-    List<Business> findAll();
+@Repository
+public interface BusinessRepository extends JpaRepository<Business, Long> {
+   Business findByBusinessname(String username);
 }
